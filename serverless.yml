@@ -26,7 +26,11 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: us-east-1
-
+   # These environment variables are made available to our functions
+  # under process.env.
+  environment:
+    tableName:
+      Ref: NotesTable
   # 'iamRoleStatement' defines the permission policy for the Lambda function.
   # In this case Lambda functions are granted with permissions to access DynamoDB.
   iamRoleStatements:
@@ -39,7 +43,8 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+      Resource: 
+        - "Fn::GetAtt": [NotesTable, Arn]
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
