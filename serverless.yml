@@ -115,3 +115,5 @@ functions:
     - ${file(resources/dynamodb-table.yml)}
     # s3
     - ${file(resources/s3-bucket.yml)}
+    # Cognito
+    - ${file(resources/cognito-user-pool.yml)}
