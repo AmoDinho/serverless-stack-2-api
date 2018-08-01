@@ -21,6 +21,8 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
     "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "jest": "^21.2.1",
     "serverless-offline": "^3.18.0",
     "serverless-webpack": "^5.1.0",
