@@ -113,3 +113,5 @@ functions:
   resources:
     #DynamoDB
     - ${file(resources/dynamodb-table.yml)}
+    # s3
+    - ${file(resources/s3-bucket.yml)}
