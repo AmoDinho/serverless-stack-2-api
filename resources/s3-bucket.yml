@@ -1,8 +1,8 @@
 Resources:
-  AttactmentsBucket:
+  AttachmentsBucket:
     Type: AWS::S3::Bucket
     Properties:
-      #Set CORS Policy
+      # Set the CORS policy
       CorsConfiguration:
         CorsRules:
           -
@@ -18,9 +18,8 @@ Resources:
               - HEAD
             MaxAge: 3000
 
-#Print out the name of the bucket that is created
+# Print out the name of the bucket that is created
 Outputs:
   AttachmentsBucketName:
     Value:
       Ref: AttachmentsBucket
-        

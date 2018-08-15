@@ -1,18 +1,22 @@
-Rosources:
+Resources:
   NotesTable:
     Type: AWS::DynamoDB::Table
     Properties:
        #Make a name based Stage
        TableName: ${self:custom.stage}-notes
        AttributeDefinitons:
-         - AttributeName: userId
+         - 
+           AttributeName: userId
            AttributeType: S
-         - AttributeName: noteId
+         - 
+           AttributeName: noteId
            AttributeType: S
        KeySchema:
-         - AttributeName: userId
+         - 
+           AttributeName: userId
            KeyType: HASH
-         - AttributeName: noteId
+         - 
+           AttributeName: noteId
            KeyType: RANGE
        #Set the capacity based on the stage
        ProvisionedThroughput: 
