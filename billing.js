@@ -1,8 +1,8 @@
 import stripePackage from "stripe";
-import { calculateCost } from "./lib/billing.js";
-import { success, failure } from "./libs/response.js";
+import { calculateCost } from "./libs/billing-lib.js";
+import { success, failure } from "./libs/response-lib.js";
 
-export async function main(eevent, context, callback){
+export async function main(event, context, callback){
    const {storage, source} = JSON.parse(event.body);
    const amount = calculateCost(storage);
    const description = "Scratch charge";
